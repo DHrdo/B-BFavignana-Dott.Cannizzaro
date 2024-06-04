@@ -1,18 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 .header {
     background-color: white;
     width: 100%;
-
-    .wrap-logo-container {
-        outline: 1px solid red;
-        padding: 20px;
-        a {
-            .bnb-logo-img {
-                outline: 1px solid gray;
-                width: 50px;
-                height: 50px;
-                border-radius: 100px;
-                object-fit: contain;
-            }
+  
+    .wrap-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px 40px;
+  
+      .logo-link {
+        display: inline-block;
+        align-self: center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -khtml-border-radius: 50%;
+  
+        .bnb-logo-img {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            -khtml-border-radius: 50%;
+            vertical-align: middle;
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
         }
+      }
+  
+      .place-name-container {
+        align-self: center;
+
+        .place-name {
+            background: linear-gradient(to right, #52adc1, #152235);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2em;
+            font-weight: bold;
+
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+          }
+      }
     }
 }
