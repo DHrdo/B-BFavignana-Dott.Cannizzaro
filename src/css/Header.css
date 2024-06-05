@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px 40px;
+  padding: 20px 40px 10px 40px;
 }
 .header .wrap-header .logo-link {
   display: inline-block;
@@ -19,10 +19,11 @@
   border-radius: 50%;
   -khtml-border-radius: 50%;
   vertical-align: middle;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
+  background-color: #52adc1;
 }
 .header .wrap-header .place-name-container {
   align-self: center;
@@ -31,7 +32,7 @@
   background: linear-gradient(to right, #52adc1, #152235);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.2em;
+  font-size: 1.7em;
   font-weight: bold;
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;

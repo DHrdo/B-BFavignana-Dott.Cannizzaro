@@ -1,0 +1,16 @@
+.pre-header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .booking-tel-number {
+        outline: 1px solid red;
+        align-self: center;
+        text-align: center;
+        font-size: 1em;
+        padding: 10px 0;
+        color: white;
+    }
+}
