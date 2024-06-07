@@ -19,7 +19,7 @@ export const Header = ({ isMenuOpened, handleMenuClick }) => {
                 </Link>
 
                 <div className="place-name-container">
-                    <h1 className="place-name">B&B Favignana.</h1>
+                    <h1 className="place-name">B&B Favignana</h1>
                 </div>
             </div>
             <div className="wrap-menu">

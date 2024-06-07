@@ -5,41 +5,33 @@
 }
 .header .wrap-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 20px 25px 10px 25px;
+  padding: 20px 0;
+  position: relative;
 }
 .header .wrap-header .logo-link {
-  outline: 4px double #152235;
   display: inline-block;
   align-self: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -khtml-border-radius: 50%;
 }
 .header .wrap-header .logo-link .bnb-logo-img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -khtml-border-radius: 50%;
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  width: 170px;
   object-fit: contain;
-  background-color: #52adc1;
 }
 .header .wrap-header .place-name-container {
   align-self: center;
 }
 .header .wrap-header .place-name-container .place-name {
-  background: linear-gradient(to right, #52adc1, #152235);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  transform: translateX(-50%);
+  color: #152235;
+  font-size: 2.3em;
   font-weight: bold;
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
