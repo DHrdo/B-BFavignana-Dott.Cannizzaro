@@ -1,16 +1,51 @@
 .pre-header {
+    border-bottom: #52adc1 1px solid;
+    background-color: #152235;
     width: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    color: #52adc1;
+    flex-wrap: wrap;
 
-    .booking-tel-number {
-        outline: 1px solid red;
-        align-self: center;
-        text-align: center;
+    .book-now {
         font-size: 1em;
-        padding: 10px 0;
-        color: white;
+        align-self: center;
+        margin: 10px;
+    }
+
+    .wrap-book-now {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+        flex-basis: 50%;
+
+        .telephone-icon {
+            align-self: center;
+            display: inline-flex;
+            width: 20px;
+            height: 20px;
+        }
+
+        .booking-tel-number {
+            align-self: center;
+            font-size: 1em;
+            margin: 0;
+        }
+    }
+
+
+    .wrap-change-language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 15px;
+
+        .flag-icon {
+            margin: 3px 0;
+            width: 20px;
+            height: 20px;
+        }
     }
 }

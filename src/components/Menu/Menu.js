@@ -3,7 +3,7 @@ import React from "react";
 export const Menu = ({ isMenuOpened, handleMenuClick }) => {
     return (
         <div className="menu">
-            <label htmlFor="check">
+            <label className="hamburger-menu" htmlFor="check">
                 <input type="checkbox" id="check" onClick={handleMenuClick}/> 
                 <span></span>
                 <span></span>

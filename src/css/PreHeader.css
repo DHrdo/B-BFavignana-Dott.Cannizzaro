@@ -1,15 +1,44 @@
 .pre-header {
+  border-bottom: #52adc1 1px solid;
+  background-color: #152235;
   width: 100%;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  color: #52adc1;
+  flex-wrap: wrap;
+}
+.pre-header .book-now {
+  font-size: 1em;
+  align-self: center;
+  margin: 10px;
+}
+.pre-header .wrap-book-now {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  flex-basis: 50%;
+}
+.pre-header .wrap-book-now .telephone-icon {
+  align-self: center;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+}
+.pre-header .wrap-book-now .booking-tel-number {
+  align-self: center;
+  font-size: 1em;
+  margin: 0;
+}
+.pre-header .wrap-change-language {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  gap: 15px;
 }
-.pre-header .booking-tel-number {
-  outline: 1px solid red;
-  align-self: center;
-  text-align: center;
-  font-size: 1em;
-  padding: 10px 0;
-  color: white;
+.pre-header .wrap-change-language .flag-icon {
+  margin: 3px 0;
+  width: 20px;
+  height: 20px;
 }

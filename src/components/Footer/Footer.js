@@ -1,8 +1,8 @@
 import React from "react";
 
-export const Footer = () => {
+export const Footer = ({ isMenuOpened }) => {
     return (
-        <div className="footer">
+        <div className={!isMenuOpened ? "footer" : "hidden"}>
             <h1>Footer</h1>
         </div>
     )

@@ -19,6 +19,8 @@ function App() {
         isMenuOpened={isMenuOpened}
         handleMenuClick={handleMenuClick}
       />
+      <Main isMenuOpened={isMenuOpened}/>
+      <Footer isMenuOpened={isMenuOpened}/>
     </div>
   );
 }
