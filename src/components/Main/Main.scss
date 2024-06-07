@@ -1,22 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-
-
 .main {
     width: 100%;
 
-    .content {
+    .text-location-container {
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        margin: auto;
 
         .description-title {
-            font-size: 30px;
+            font-size: 24px;
             text-align: center;
             margin: 20px 0;
-            font-family: "Dancing Script", cursive;
+            font-family: "Montserrat", cursive;
             font-optical-sizing: auto;
             font-weight: 900;
         }
@@ -25,6 +20,7 @@
             line-height: 1.6;
             font-size: 18px;
             text-align: center;
+            font-family: "Montserrat", cursive;
 
             .highlight {
                 color: #007BFF;

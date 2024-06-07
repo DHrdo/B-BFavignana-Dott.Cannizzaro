@@ -1,4 +1,50 @@
 .footer {
-  width: 100%;
-  background-color: lightblue;
+  padding: 30px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+.footer .footer-title {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.footer .upper-footer .footer-contacts-title {
+  text-align: center;
+  font-size: 24px;
+}
+.footer .upper-footer .footer-contacts-address {
+  padding: 0 0 0 30px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.footer .upper-footer .footer-contacts-phone {
+  padding: 0 0 0 30px;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+.footer .upper-footer .footer-contacts-phone a {
+  font-weight: normal;
+  color: black;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.footer .upper-footer .footer-contacts-mail {
+  padding: 0 0 0 30px;
+  font-weight: bolder;
+}
+.footer .upper-footer .footer-contacts-mail a {
+  font-weight: normal;
+  color: black;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.footer .bottom-footer .footer-copyright {
+  text-align: center;
+  font-size: 10px;
+}
+.footer .post-footer {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }

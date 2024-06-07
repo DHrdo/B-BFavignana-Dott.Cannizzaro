@@ -13,7 +13,7 @@ export const PreHeader = () => {
                     src={process.env.PUBLIC_URL + '/images/telephone-icon.svg'}
                     alt="telephone icon"
                 />
-                <h5 className="booking-tel-number">123 456 7891</h5>
+                <h5 className="booking-tel-number">392 725 2398</h5>
             </div>
 
             <div className="wrap-change-language">

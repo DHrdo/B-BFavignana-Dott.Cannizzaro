@@ -1,6 +1,11 @@
+/** Import Css **/
 @import url('/src/css/PreHeader.css');
 @import url('/src/css/Header.css');
 @import url('/src/css/Main.css');
 @import url('/src/css/Footer.css');
 @import url('/src/css/Menu.css');
 @import url('/src/css/Carousel.css');
+
+/** Import Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
