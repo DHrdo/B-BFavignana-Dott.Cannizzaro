@@ -1,72 +1,53 @@
-import React from "react";
+import React from 'react';
+import ROOMS_JSON from '../../JSON/room-images.json';
 
 export const Carousel = () => {
-    return (
-        <div className="carousel">
-            <div id="rooms-photos" className="carousel slide" data-bs-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li
-                        data-bs-target="#rooms-photos"
-                        data-bs-slide-to="0"
-                        className="active"
-                        aria-current="true"
-                        aria-label="First slide"
-                    ></li>
-                    <li
-                        data-bs-target="#rooms-photos"
-                        data-bs-slide-to="1"
-                        aria-label="Second slide"
-                    ></li>
-                    <li
-                        data-bs-target="#rooms-photos"
-                        data-bs-slide-to="2"
-                        aria-label="Third slide"
-                    ></li>
-                </ol>
-                <div className="carousel-inner" role="listbox">
-                    <div className="carousel-item active">
-                        <img
-                            src="holder.js/900x500/auto/#777:#555/text:First slide"
-                            className="w-100 d-block"
-                            alt="First slide"
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <img
-                            src="holder.js/900x500/auto/#666:#444/text:Second slide"
-                            className="w-100 d-block"
-                            alt="Second slide"
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <img
-                            src="holder.js/900x500/auto/#666:#444/text:Third slide"
-                            className="w-100 d-block"
-                            alt="Third slide"
-                        />
-                    </div>
-                </div>
-                <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#rooms-photos"
-                    data-bs-slide="prev"
-                >
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#rooms-photos"
-                    data-bs-slide="next"
-                >
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
-            
-        </div>
-    );
-};
+  const CAROUSEL_IMAGES = ROOMS_JSON.find((room) => room.name === 'Foto Carosello');
 
+  if (!CAROUSEL_IMAGES) {
+    return null; // or some fallback UI
+  }
+
+  // **MAPPA IMMAGINI CAROSELLO
+  const mapCarouselImages = CAROUSEL_IMAGES.images.map((item, index) => {
+    const imagePath = process.env.PUBLIC_URL + item;
+    const isActive = index === 0 ? 'active' : '';
+
+    return (
+      <div className={`carousel-item ${isActive}`} key={index}>
+        <img src={imagePath} className="d-block w-100" alt={item.name} />
+      </div>
+    );
+  });
+
+  return (
+    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-indicators">
+        {CAROUSEL_IMAGES.images.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to={index}
+            className={index === 0 ? 'active' : ''}
+            aria-current={index === 0 ? 'true' : 'false'}
+            aria-label={`Slide ${index + 1}`}
+          ></button>
+        ))}
+      </div>
+
+      <div className="carousel-inner">
+        {mapCarouselImages}
+      </div>
+
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+  );
+}

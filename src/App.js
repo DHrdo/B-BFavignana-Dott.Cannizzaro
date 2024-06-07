@@ -10,7 +10,6 @@ function App() {
 
   const handleMenuClick = () => {
     setIsMenuOpened(prevState => !prevState);
-    console.log('STATE: isMenuOpened', isMenuOpened);
   }
 
   return (

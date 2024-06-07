@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Foto Carosello",
+        "images": [
+            "/images/carousel-images/blue1.jpg",
+            "/images/carousel-images/orange1.jpg",
+            "/images/carousel-images/yellow1.jpg"
+        ]
+    },
+    {
+        "name": "Stanza Gialla",
+        "images": [
+            "/images/rooms/yellow/yellow1.jpg",
+            "/images/rooms/yellow/yellow2.jpg",
+            "/images/rooms/yellow/yellow3.jpg",
+            "/images/rooms/yellow/yellow4.jpg"
+        ],
+        "price": 100
+    },
+    {
+        "name": "Stanza Arancione",
+        "images": [
+            "/images/rooms/orange/orange1.jpg"
+        ],
+        "price": 100
+    },
+    {
+        "name": "Stanza Blu",
+        "images": [
+            "/images/rooms/blu/blu1.jpg",
+            "/images/rooms/blu/blu2.jpg",
+            "/images/rooms/blu/blu3.jpg",
+            "/images/rooms/blu/blu4.jpg"
+        ],
+        "price": 100
+    },
+    {
+        "name": "Entrata",
+        "images": [
+            "/images/rooms/entrata/entrata1.jpg",
+            "/images/rooms/entrata/entrata2.jpg",
+            "/images/rooms/entrata/entrata3.jpg",
+            "/images/rooms/entrata/entrata4.jpg"
+        ]
+    }
+]
