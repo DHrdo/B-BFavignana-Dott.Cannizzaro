@@ -1,32 +1,36 @@
 import React from "react";
-import dateperiods from "../../JSON/booking-periods.json";
+import datePeriodsIT from "../../JSON/booking-periods_it.json";
+import datePeriodsEN from "../../JSON/booking-periods_en.json";
 
-export const PricesAndConditions = ({
-    isMenuOpened
-}) => {
+export const PricesAndConditions = ({ language, isMenuOpened, }) => {
+    const renderBookingPeriods = () => {
+        const periods = language === 'italian' ? datePeriodsIT : datePeriodsEN;
 
-    const mapPeriods = dateperiods.map((item, index) => {
-        return (
-            <div className="section" key={index}>
-                <h4 className="section-title">{item.name}</h4>
-                <div className="wrap-dates">
-                    <p className="first-date">{item.date?.[0] || ""}</p>
-                    <p className="second-date">{item.date?.[1] || ""}</p>
+        return periods.map((item, index) => {
+            const { name_it: nameIT = '', name_en: nameEN = '', date = [], prices = {} } = item;
+
+            return (
+                <div className="section" key={index}>
+                    <h4 className="section-title">{language === 'italian' ? nameIT : nameEN}</h4>
+                    <div className="wrap-dates">
+                        <p className="first-date">{date[0] || ""}</p>
+                        <p className="second-date">{date[1] || ""}</p>
+                    </div>
+                    <div className="wrap-prices">
+                        {Object.keys(prices).map((priceKey, priceIndex) => (
+                            <p className="room-price" key={priceIndex}> {priceKey}: <b>{prices[priceKey]}</b></p>
+                        ))}
+                    </div>
                 </div>
-                <div className="wrap-prices">
-                    <p className="room-price">SINGOLA: <b>{item.prices?.["Singola"] || ""}</b></p>
-                    <p className="room-price">DOPPIA (USO SINGOLA): <b>{item.prices?.["Doppia Uso Singola"] || ""}</b></p>
-                    <p className="room-price">DOPPIA MATRIMONIALE: <b>{item.prices?.["Doppia Matrimoniale"] || ""}</b></p>
-                </div>
-            </div>
-        )
-    });
+            );
+        });
+    };
 
     return (
         <div className={isMenuOpened ? "hidden" : "prices-and-conditions"}>
-            <p className="title">PREZZI E CONDIZIONI</p>
+            <p className="title">{language === 'italian' ? 'PREZZI E CONDIZIONI' : 'PRICES AND CONDITIONS'}</p>
             <div className="prices-table">
-                {mapPeriods}
+                {renderBookingPeriods()}
             </div>
         </div>
     );

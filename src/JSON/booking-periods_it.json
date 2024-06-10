@@ -1,6 +1,6 @@
 [
     {
-        "name": "BASSA STAGIONE",
+        "name_it": "BASSA STAGIONE",
         "date": [
             "01 Mag - 31 Mag",
             "01 Ott - 15 Nov"
@@ -9,10 +9,10 @@
             "Singola": "€ 50,00",
             "Doppia Uso Singola": "€ 60,00",
             "Doppia Matrimoniale": "€ 60,00"
-        }
+        } 
     },
     {
-        "name": "MEDIA STAGIONE",
+        "name_it": "MEDIA STAGIONE",
         "date": [
             "01 Giu - 01 Lug",
             "16 Set - 30 Set"
@@ -24,7 +24,7 @@
         }
     },
     {
-        "name": "ALTA STAGIONE",
+        "name_it": "ALTA STAGIONE",
         "date": [
             "01 Lug - 31 Lug",
             "01 Set - 15 Set"
@@ -36,7 +36,7 @@
         }
     },
     {
-        "name": "FERRAGOSTO",
+        "name_it": "FERRAGOSTO",
         "date": [
             "05 Ago - 18 Ago"
         ],
@@ -47,7 +47,7 @@
         }
     },
     {
-        "name": "AGOSTO",
+        "name_it": "AGOSTO",
         "date": [
             "01 Ago - 4 Ago",
             "19 Ago - 31 Ago"

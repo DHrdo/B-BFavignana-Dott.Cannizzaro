@@ -3,7 +3,7 @@ import { Carousel } from "../Carousel/Carousel";
 import { Directions } from "../Directions/Directions";
 import { PricesAndConditions } from "../PricesAndConditions/PricesAndConditions";
 
-export const Main = ({ isMenuOpened }) => {
+export const Main = ({ isMenuOpened, language }) => {
     return (
         <main className={!isMenuOpened ? "main" : "hidden"}>
 
@@ -25,7 +25,7 @@ export const Main = ({ isMenuOpened }) => {
             <Carousel />
             <span className="line"></span>
             <Directions isMenuOpened={isMenuOpened} />
-            <PricesAndConditions />
+            <PricesAndConditions isMenuOpened={isMenuOpened} language={language} />
             <span className="line"></span>
         </main>
     );

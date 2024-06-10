@@ -37,7 +37,7 @@ function App() {
         setLanguage={setLanguage}
         handleLanguageChange={handleLanguageChange}
       />
-      <Main isMenuOpened={isMenuOpened} />
+      <Main isMenuOpened={isMenuOpened} language={language} />
       <Footer isMenuOpened={isMenuOpened} />
     </div>
   );
