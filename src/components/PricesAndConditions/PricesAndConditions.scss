@@ -1,0 +1,56 @@
+.prices-and-conditions {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 3px;
+    font-family: 'Montserrat', cursive, sans-serif;
+
+
+    .title {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px 0;
+        font-weight: 900;
+    }
+
+    .prices-table {
+        width: 100%;
+        outline: 1px solid black;
+
+
+        .section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 10px;
+
+            .section-title {
+                align-self: center;
+                width: 50%;
+                font-size: 16px;
+                text-align: left;
+                font-family: 'Montserrat', cursive, sans-serif;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .wrap-dates {
+                display: flex;
+                flex-direction: column;
+
+                .first-date {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                }
+
+                .second-date {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                }
+
+            }
+
+        }
+    }
+}

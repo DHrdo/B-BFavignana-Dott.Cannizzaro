@@ -2,10 +2,12 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding: 10px 20px;
+    
 
     .directions-container {
+        
         .directions-title {
-            font-size: 24px;
+            font-size: 30px;
             text-align: center;
             margin: 20px 0;
             font-family: 'Montserrat', cursive;
@@ -14,6 +16,7 @@
     }
 
     .near-locations-container {
+
         .services-title {
             font-size: 24px;
             text-align: center;
@@ -23,7 +26,6 @@
         }
 
         .services-list {
-
             display: grid;
             grid-template-columns: 1fr 1fr;
             list-style: none;

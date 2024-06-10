@@ -24,7 +24,8 @@
   color: #007BFF;
   font-weight: bold;
 }
-.main .line {
+
+.line {
   display: block;
   width: 75%;
   height: 2px;

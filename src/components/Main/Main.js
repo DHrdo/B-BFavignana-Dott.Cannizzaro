@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "../Carousel/Carousel";
 import { Directions } from "../Directions/Directions";
+import { PricesAndConditions } from "../PricesAndConditions/PricesAndConditions";
 
 export const Main = ({ isMenuOpened }) => {
     return (
@@ -21,13 +22,11 @@ export const Main = ({ isMenuOpened }) => {
             </div>
 
 
-            {/* Carousel Component */}
             <Carousel />
-
             <span className="line"></span>
-
-            {/* Where are we Component */}
             <Directions isMenuOpened={isMenuOpened} />
+            <PricesAndConditions />
+            <span className="line"></span>
         </main>
     );
 };
