@@ -12,22 +12,23 @@
 }
 .prices-and-conditions .prices-table {
   width: 100%;
-  outline: 1px solid black;
 }
 .prices-and-conditions .prices-table .section {
+  border: 1px double rgba(0, 0, 0, 0.116);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 10px;
+  margin: 20px 10px;
 }
 .prices-and-conditions .prices-table .section .section-title {
   align-self: center;
-  width: 50%;
-  font-size: 16px;
+  font-size: 20px;
   text-align: left;
   font-family: "Montserrat", cursive, sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
+  padding: 20px 0 0 0;
 }
 .prices-and-conditions .prices-table .section .wrap-dates {
   display: flex;
@@ -42,4 +43,13 @@
   margin: 0;
   padding: 0;
   font-size: 14px;
+}
+.prices-and-conditions .prices-table .section .wrap-prices {
+  margin: 10px 0 0 10px;
+  text-align: left;
+}
+.prices-and-conditions .prices-table .section .wrap-prices .room-price {
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-size: 1em;
 }

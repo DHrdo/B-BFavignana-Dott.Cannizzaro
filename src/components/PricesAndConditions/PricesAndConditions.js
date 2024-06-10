@@ -8,10 +8,15 @@ export const PricesAndConditions = ({
     const mapPeriods = dateperiods.map((item, index) => {
         return (
             <div className="section" key={index}>
-                <h3 className="section-title">{item.name}</h3>
+                <h4 className="section-title">{item.name}</h4>
                 <div className="wrap-dates">
                     <p className="first-date">{item.date?.[0] || ""}</p>
                     <p className="second-date">{item.date?.[1] || ""}</p>
+                </div>
+                <div className="wrap-prices">
+                    <p className="room-price">SINGOLA: <b>{item.prices?.["Singola"] || ""}</b></p>
+                    <p className="room-price">DOPPIA (USO SINGOLA): <b>{item.prices?.["Doppia Uso Singola"] || ""}</b></p>
+                    <p className="room-price">DOPPIA MATRIMONIALE: <b>{item.prices?.["Doppia Matrimoniale"] || ""}</b></p>
                 </div>
             </div>
         )
