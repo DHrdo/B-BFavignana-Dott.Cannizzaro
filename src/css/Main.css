@@ -5,7 +5,6 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .main .text-location-container .description-title {
   font-size: 24px;
@@ -15,13 +14,20 @@
   font-optical-sizing: auto;
   font-weight: 900;
 }
-.main .text-location-container p {
+.main .text-location-container .location-description {
   line-height: 1.6;
   font-size: 18px;
   text-align: center;
   font-family: "Montserrat", cursive;
 }
-.main .text-location-container p .highlight {
+.main .text-location-container .location-description .highlight {
   color: #007BFF;
   font-weight: bold;
+}
+.main .line {
+  display: block;
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 40px auto 20px auto;
 }

@@ -3,17 +3,28 @@ import { Link } from "react-router-dom";
 import { Menu } from "../Menu/Menu";
 import { PreHeader } from "../PreHeader/PreHeader";
 
-export const Header = ({ isMenuOpened, handleMenuClick }) => {
+export const Header = ({
+    isMenuOpened,
+    handleMenuClick,
+    language,
+    setLanguage,
+    handleLanguageChange
+}) => {
+
     return (
         <div className="header">
 
-            <PreHeader />
-            
+            <PreHeader
+                language={language}
+                setLanguage={setLanguage}
+                handleLanguageChange={handleLanguageChange}
+            />
+
             <div className="wrap-header">
                 <Link to={'/'} className="logo-link">
-                    <img 
-                        className="bnb-logo-img" 
-                        alt="bnb Favignana Logo" 
+                    <img
+                        className="bnb-logo-img"
+                        alt="bnb Favignana Logo"
                         src={process.env.PUBLIC_URL + '/images/logo/bnb-logo.png'}
                     />
                 </Link>
@@ -26,6 +37,7 @@ export const Header = ({ isMenuOpened, handleMenuClick }) => {
                 <Menu
                     isMenuOpened={isMenuOpened}
                     handleMenuClick={handleMenuClick}
+                    language={language}
                 />
             </div>
         </div>

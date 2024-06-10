@@ -11,38 +11,57 @@
     }
 
     .upper-footer {
+        text-align: center;
 
         .footer-contacts-title {
-            text-align: center;
             font-size: 24px;
         }
 
-        .footer-contacts-address {
-            padding: 0 0 0 30px;
-            margin-top: 5px;
-            margin-bottom: 0;
+        .wrap-address {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .footer-contacts-address {
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+
+            .map-icon {
+                img {
+                    margin-top: 4px;
+                    width: 20px;
+
+                }
+            }
+
+            .map-icon:hover {
+                transform: scale(1.2);
+            }
         }
 
+
         .footer-contacts-phone {
-            padding: 0 0 0 30px;
             font-weight: bolder;
             margin-bottom: 0;
 
             a {
+                margin-left: 5px;
                 font-weight: normal;
                 color: black;
-                margin-left: 5px;
                 text-decoration: underline;
             }
         }
+
         .footer-contacts-mail {
-            padding: 0 0 0 30px;
             font-weight: bolder;
 
             a {
+                margin-left: 5px;
                 font-weight: normal;
                 color: black;
-                margin-left: 5px;
                 text-decoration: underline;
             }
         }

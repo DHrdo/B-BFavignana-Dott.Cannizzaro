@@ -1,10 +1,14 @@
 import React from "react";
 
-export const PreHeader = () => {
+export const PreHeader = ({
+    handleLanguageChange,
+    language
+}) => {
+
     return (
         <div className="pre-header">
-            
-            <h5 className="book-now">Prenota Adesso!</h5>
+
+            <h5 className="book-now">{language === 'english' ? 'Book Now!' : 'Prenota!'}</h5>
 
             <div className="wrap-book-now">
 
@@ -17,8 +21,19 @@ export const PreHeader = () => {
             </div>
 
             <div className="wrap-change-language">
-                <img className="flag-icon" src={process.env.PUBLIC_URL + '/images/flags/italian-flag-icon.svg'} alt="flag icon"/>
-                <img className="flag-icon" src={process.env.PUBLIC_URL + '/images/flags/english-flag-icon.svg'} alt="flag icon"/>
+                <img
+                    className="flag-icon"
+                    src={process.env.PUBLIC_URL + '/images/flags/italian-flag-icon.svg'}
+                    alt="flag icon"
+                    onClick={() => handleLanguageChange('italian')}
+                />
+
+                <img
+                    className="flag-icon"
+                    src={process.env.PUBLIC_URL + '/images/flags/english-flag-icon.svg'}
+                    alt="flag icon"
+                    onClick={() => handleLanguageChange('english')}
+                />
             </div>
         </div>
     );
