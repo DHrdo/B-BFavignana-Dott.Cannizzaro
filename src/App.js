@@ -24,7 +24,7 @@ function App() {
   const handleLanguageChange = (language) => {
     setLanguage(language);
     localStorage.setItem('language', language);
-    window.location.reload();
+    //window.location.reload();
   };
 
   return (
