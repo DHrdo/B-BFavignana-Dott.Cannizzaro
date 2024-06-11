@@ -21,7 +21,7 @@ export const Footer = ({ isMenuOpened, language }) => {
                         />
                     </a>
                 </div>
-                
+
 
                 <p className="footer-contacts-phone"> {language === 'italian' ? 'Telefono' : 'Phone'}:
                     <a href="tel:3927252398">392 725 2398</a>
