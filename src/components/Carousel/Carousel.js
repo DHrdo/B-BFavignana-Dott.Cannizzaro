@@ -15,7 +15,7 @@ export const Carousel = () => {
 
     return (
       <div className={`carousel-item ${isActive}`} key={index}>
-        <img src={imagePath} className="d-block w-100" alt={item.name} />
+        <img src={imagePath} className="d-block w-100" alt='Foto Carosello' />
       </div>
     );
   });
