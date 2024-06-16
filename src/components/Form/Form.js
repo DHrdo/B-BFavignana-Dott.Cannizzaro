@@ -33,7 +33,7 @@ export const Form = () => {
 
         <form className="form" id="form" action="#">
 
-            <h1 className="form-title">Prenota</h1>
+            <h3 className="form-title">Prenota</h3>
 
             {/* NAME AND LASTNAME */}
             <div className="wrap-name">
