@@ -1,38 +1,47 @@
+$bg-color-container: #fff;
+$border-radius: 8px;
+$description-title-font-size: 24px;
+$location-description-font-size: 18px;
+$highlight-color: #007BFF;
+$line-width: 75%;
+$line-height: 2px;
+$line-color: #ccc;
+
 .main {
-    width: 100%;
+  width: 100%;
 
-    .text-location-container {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
+  .text-location-container {
+    background-color: $bg-color-container;
+    padding: 20px;
+    border-radius: $border-radius;
 
-        .description-title {
-            font-size: 24px;
-            text-align: center;
-            margin: 20px 0;
-            font-family: "Montserrat", cursive;
-            font-optical-sizing: auto;
-            font-weight: 900;
-        }
-
-        .location-description {
-            line-height: 1.6;
-            font-size: 18px;
-            text-align: center;
-            font-family: "Montserrat", cursive;
-
-            .highlight {
-                color: #007BFF;
-                font-weight: bold;
-            }
-        }
+    .description-title {
+      font-size: $description-title-font-size;
+      text-align: center;
+      margin: 20px 0;
+      font-family: "Montserrat", cursive;
+      font-optical-sizing: auto;
+      font-weight: 900;
     }
+
+    .location-description {
+      line-height: 1.6;
+      font-size: $location-description-font-size;
+      text-align: center;
+      font-family: "Montserrat", cursive;
+
+      .highlight {
+        color: $highlight-color;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .line {
-    display: block;
-    width: 75%;
-    height: 2px;
-    background-color: #ccc;
-    margin: 40px auto 20px auto;
+  display: block;
+  width: $line-width;
+  height: $line-height;
+  background-color: $line-color;
+  margin: 40px auto 20px auto;
 }

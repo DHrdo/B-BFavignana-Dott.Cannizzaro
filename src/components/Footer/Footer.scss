@@ -1,82 +1,80 @@
+$footer-padding: 30px 0 0 0;
+$footer-title-font: 'Dancing Script', 'sans-serif', cursive;
+$footer-title-size: 24px;
+$footer-title-weight: 900;
+$footer-contacts-title-size: $footer-title-size;
+$footer-contacts-address-margin: 5px 0;
+$footer-contacts-icon-width: 20px;
+$footer-contacts-icon-hover-scale: 1.2;
+$footer-copyright-size: 10px;
+$footer-gap: 5px;
+
 .footer {
-    padding: 30px 0 0 0;
-    font-family: 'Montserrat', sans-serif;
+  padding: $footer-padding;
+  font-family: 'Montserrat', sans-serif;
 
-    .footer-title {
-        font-size: 24px;
-        text-align: center;
-        font-family: "Dancing Script", cursive;
-        font-weight: 900;
-        margin-bottom: 30px;
+  .footer-title {
+    font-size: $footer-title-size;
+    text-align: center;
+    font-family: $footer-title-font;
+    font-weight: $footer-title-weight;
+    margin-bottom: 30px;
+  }
+
+  .upper-footer {
+    text-align: center;
+
+    .footer-contacts-title {
+      font-size: $footer-contacts-title-size;
     }
 
-    .upper-footer {
-        text-align: center;
+    .wrap-address {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: $footer-gap;
 
-        .footer-contacts-title {
-            font-size: 24px;
+      .footer-contacts-address {
+        margin: $footer-contacts-address-margin;
+      }
+
+      .map-icon {
+        img {
+          margin-top: 4px;
+          width: $footer-contacts-icon-width;
         }
 
-        .wrap-address {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-
-            .footer-contacts-address {
-                margin-top: 5px;
-                margin-bottom: 0;
-            }
-
-            .map-icon {
-                img {
-                    margin-top: 4px;
-                    width: 20px;
-
-                }
-            }
-
-            .map-icon:hover {
-                transform: scale(1.2);
-            }
+        &:hover {
+          transform: scale($footer-contacts-icon-hover-scale);
         }
+      }
 
+      .footer-contacts-phone,
+      .footer-contacts-mail {
+        font-weight: bolder;
+        margin-bottom: 0;
 
-        .footer-contacts-phone {
-            font-weight: bolder;
-            margin-bottom: 0;
-
-            a {
-                margin-left: 5px;
-                font-weight: normal;
-                color: black;
-                text-decoration: underline;
-            }
+        a {
+          margin-left: 5px;
+          font-weight: normal;
+          color: black;
+          text-decoration: underline;
         }
-
-        .footer-contacts-mail {
-            font-weight: bolder;
-
-            a {
-                margin-left: 5px;
-                font-weight: normal;
-                color: black;
-                text-decoration: underline;
-            }
-        }
+      }
     }
+  }
 
-    .bottom-footer {
-        .footer-copyright {
-            text-align: center;
-            font-size: 10px;
-        }
+  .bottom-footer {
+    .footer-copyright {
+      text-align: center;
+      font-size: $footer-copyright-size;
     }
+  }
 
-    .post-footer {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-    }
+  .post-footer {
+    display: flex;
+    justify-content: center;
+    gap: $footer-gap;
+  }
 }

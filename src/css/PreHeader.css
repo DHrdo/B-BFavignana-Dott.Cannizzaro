@@ -1,11 +1,11 @@
 .pre-header {
-  border-bottom: #52adc1 1px solid;
+  border-bottom: 1px solid #52adc1;
   background-color: #152235;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
   color: #52adc1;
-  flex-wrap: wrap;
 }
 .pre-header .book-now {
   font-size: 1em;
@@ -19,14 +19,16 @@
   gap: 5px;
   flex-basis: 50%;
 }
-.pre-header .wrap-book-now .telephone-icon {
+.pre-header .wrap-book-now .telephone-icon,
+.pre-header .wrap-book-now .booking-tel-number {
   align-self: center;
+}
+.pre-header .wrap-book-now .telephone-icon {
   display: inline-flex;
   width: 20px;
   height: 20px;
 }
 .pre-header .wrap-book-now .booking-tel-number {
-  align-self: center;
   font-size: 1em;
   margin: 0;
 }

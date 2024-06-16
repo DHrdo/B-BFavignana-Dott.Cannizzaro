@@ -3,6 +3,7 @@ import React from "react";
 import { Carousel } from "../Carousel/Carousel";
 import { Directions } from "../Directions/Directions";
 import { PricesAndConditions } from "../PricesAndConditions/PricesAndConditions";
+import { Form } from "../Form/Form";
 
 export const Main = ({ isMenuOpened, language }) => {
 
@@ -51,6 +52,7 @@ export const Main = ({ isMenuOpened, language }) => {
             <Directions isMenuOpened={isMenuOpened} />
             <PricesAndConditions isMenuOpened={isMenuOpened} language={language} />
             <span className="line"></span>
+            <Form />
         </main>
     );
 };

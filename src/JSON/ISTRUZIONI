@@ -1,0 +1,112 @@
+Il file JSON fornito è composto da due sezioni principali: 
+1- rooms (STANZE) 
+2- booking-periods_it / booking-periods_en (TARIFFE STAGIONALI) [file presente sia in italiano che in inglese, da modificare contemporaneamente].
+
+
+Di seguito è riportata una guida dettagliata su come modificare ciascuna sezione.
+
+1. ** SEZIONE 'ROOMS' ** 
+Questa sezione contiene informazioni sulle stanze e le loro immagini associate. Ogni stanza è rappresentata come un oggetto con un nome e un array di immagini.
+
+Esempio di un oggetto stanza:
+{
+    "name": "Stanza Gialla",
+    "images": [
+        "/images/rooms/yellow/yellow1.jpg",
+        "/images/rooms/yellow/yellow2.jpg",
+        "/images/rooms/yellow/yellow3.jpg",
+        "/images/rooms/yellow/yellow4.jpg"
+    ]
+}
+
+Per aggiungere una nuova stanza:
+1- Copia un oggetto stanza esistente (comprese le parentesi);
+2- Incollalo nella posizione desiderata all'interno dell'array ( [] ).
+3- Modifica il valore di "name" con il nome della nuova stanza.
+4- Creare una nuova cartella all'interno del percorso ' public/images/rooms/[nome_della_nuova _stanza] '
+5- Inserire le varie immagini all'interno della cartella (i nomi nelle immagini nella cartella devono corrispondere al valore di 'name' dell'oggetto stanza).
+
+NOTE AGGIUNTIVE
+Assicurati che ogni oggetto sia separato da una virgola, eccetto l'ultimo oggetto di ciascuna sezione.
+Rispetta la struttura JSON (apici, virgole e parentesi) per evitare errori di sintassi.
+
+Esempio:
+
+[
+    {...}, // Altra stanza pre-esistente
+    {
+        "name": "Stanza Verde",
+        "images": [
+            "/images/rooms/green/green1.jpg",
+            "/images/rooms/green/green2.jpg"
+        ]
+    },
+    {...}, // Altra stanza pre-esistente
+]
+
+
+Per rimuovere una stanza:
+1- Individua l'oggetto stanza che desideri rimuovere.
+2- Elimina l'intero oggetto compreso tra { e }
+
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+
+
+2. ** SEZIONE 'SEASON_PRICING' ** 
+Questa sezione contiene informazioni sulle tariffe stagionali. 
+
+Ogni stagione è rappresentata come un oggetto con:
+1- Un nome in italiano (name_it);
+2- Un array di date (date);
+3- Un oggetto di prezzi (prices).
+
+
+Esempio di un oggetto stagione:
+{
+    "name_it": "BASSA STAGIONE",
+    "date": [
+        "01 Mag - 31 Mag",
+        "01 Ott - 15 Nov"
+    ],
+    "prices": {
+        "Singola": "€ 50,00",
+        "Doppia Uso Singola": "€ 60,00",
+        "Doppia Matrimoniale": "€ 60,00"
+    }
+}
+
+Per aggiungere una nuova stagione:
+1- Copia un oggetto stagione esistente.
+2- Incollalo nella posizione desiderata all'interno dell'array ( [] ).
+3- Modifica il valore di "name_it" con il nome della nuova stagione.
+4- Aggiorna le date nell'array "date".
+5- Modifica i prezzi nell'oggetto "prices".
+
+NOTE AGGIUNTIVE
+Assicurati che ogni oggetto sia separato da una virgola, eccetto l'ultimo oggetto di ciascuna sezione.
+Rispetta la struttura JSON (apici, virgole e parentesi) per evitare errori di sintassi.
+
+Esempio:
+
+[
+    {...}, // Altra stagione pre-esistente
+    {
+        "name_it": "NOME NUOVA STAGIONE",
+        "date": [
+            "01 Dic - 31 Dic"
+        ],
+        "prices": {
+            "Singola": "€ 70,00",
+            "Doppia Uso Singola": "€ 80,00",
+            "Doppia Matrimoniale": "€ 90,00"
+        }
+    }
+    {...}, // Altra stagione pre-esistente
+]
+
+Per rimuovere una stagione:
+1- Individua l'oggetto stagione che desideri rimuovere.
+2- Elimina l'intero oggetto compreso tra { e }.
+

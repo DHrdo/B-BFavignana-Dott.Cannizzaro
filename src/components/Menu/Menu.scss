@@ -1,5 +1,9 @@
-.menu {
+$menu-background: #152235;
+$menu-item-border: black;
+$highlight-color: lightcoral;
+$menu-z-index: 9999;
 
+.menu {
   display: grid;
   place-items: center;
   margin: 0;
@@ -10,65 +14,49 @@
     flex-direction: column;
     width: 30px;
     cursor: pointer;
-
     position: relative;
-
-    z-index: 9999;
+    z-index: $menu-z-index;
 
     span {
-      background: #152235;
+      background: $menu-background;
       border-radius: 25px;
       height: 5px;
       margin: 3px 0;
       transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
     }
 
     span:nth-of-type(1) {
       width: 50%;
-
     }
 
     span:nth-of-type(2) {
       width: 100%;
     }
 
-
     span:nth-of-type(3) {
       width: 75%;
-
     }
-
 
     input[type="checkbox"] {
       display: none;
     }
 
-
     input[type="checkbox"]:checked~span:nth-of-type(1) {
       transform-origin: bottom;
-      transform: rotatez(45deg) translate(3px, 5px);
+      transform: rotateZ(45deg) translate(3px, 5px);
     }
-
 
     input[type="checkbox"]:checked~span:nth-of-type(2) {
-
       transform-origin: top;
-      transform: rotatez(-45deg)
+      transform: rotateZ(-45deg);
     }
-
 
     input[type="checkbox"]:checked~span:nth-of-type(3) {
-
       transform-origin: bottom;
       width: 50%;
-      transform: translate(18px, -10px) rotatez(45deg);
-
+      transform: translate(18px, -10px) rotateZ(45deg);
     }
-
   }
-
-
 
   .wrap-menu-items {
     position: absolute;
@@ -76,7 +64,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    border-bottom: 1px solid lightcoral;
+    border-bottom: 1px solid $highlight-color;
 
     .list {
       display: flex;
@@ -90,18 +78,15 @@
         text-align: center;
         padding: 5px;
         width: 70%;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $menu-item-border;
         margin: 10px 0;
         font-size: 1em;
         color: black;
-      }
 
-      .item:hover {
-        transform: scale(1.1);
-      }
-
-      .item:active {
-        transform: scale(1.1);
+        &:hover,
+        &:active {
+          transform: scale(1.1);
+        }
       }
     }
   }
