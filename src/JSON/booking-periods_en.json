@@ -1,0 +1,61 @@
+[
+    {
+        "name_en": "LOW SEASON",
+        "date": [
+            "01 May - 31 May",
+            "01 Oct - 15 Nov"
+        ],
+        "prices": {
+            "Single": "€ 50.00",
+            "Double Single Use": "€ 60.00",
+            "Double Matrimonial": "€ 60.00"
+        }
+    },
+    {
+        "name_en": "MID SEASON",
+        "date": [
+            "01 Jun - 01 Jul",
+            "16 Sep - 30 Sep"
+        ],
+        "prices": {
+            "Single": "€ 60.00",
+            "Double Single Use": "€ 70.00",
+            "Double Matrimonial": "€ 85.00"
+        }
+    },
+    {
+        "name_en": "HIGH SEASON",
+        "date": [
+            "01 Jul - 31 Jul",
+            "01 Sep - 15 Sep"
+        ],
+        "prices": {
+            "Single": "not available",
+            "Double Single Use": "€ 75.00",
+            "Double Matrimonial": "€ 100.00"
+        }
+    },
+    {
+        "name_en": "AUGUST HOLIDAYS",
+        "date": [
+            "05 Aug - 18 Aug"
+        ],
+        "prices": {
+            "Single": "not available",
+            "Double Single Use": "not available",
+            "Double Matrimonial": "€ 140.00"
+        }
+    },
+    {
+        "name_en": "AUGUST",
+        "date": [
+            "01 Aug - 4 Aug",
+            "19 Aug - 31 Aug"
+        ],
+        "prices": {
+            "Single": "not available",
+            "Double Single Use": "not available",
+            "Double Matrimonial": "€ 125.00"
+        }
+    }
+]

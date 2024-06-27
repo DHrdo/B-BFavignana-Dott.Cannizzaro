@@ -14,15 +14,13 @@
             "/images/rooms/yellow/yellow2.jpg",
             "/images/rooms/yellow/yellow3.jpg",
             "/images/rooms/yellow/yellow4.jpg"
-        ],
-        "price": 100
+        ]
     },
     {
         "name": "Stanza Arancione",
         "images": [
             "/images/rooms/orange/orange1.jpg"
-        ],
-        "price": 100
+        ]
     },
     {
         "name": "Stanza Blu",
@@ -31,8 +29,7 @@
             "/images/rooms/blu/blu2.jpg",
             "/images/rooms/blu/blu3.jpg",
             "/images/rooms/blu/blu4.jpg"
-        ],
-        "price": 100
+        ]
     },
     {
         "name": "Entrata",

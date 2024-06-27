@@ -1,5 +1,10 @@
+$bg-color-header: white;
+$text-color-header: #152235;
+$logo-width: 170px;
+$place-name-font-size: 2.3em;
+
 .header {
-  background-color: white;
+  background-color: $bg-color-header;
   width: 100%;
 
   .wrap-header {
@@ -7,16 +12,15 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0;
-
     position: relative;
+    top: 50px;
 
     .logo-link {
       display: inline-block;
       align-self: center;
 
-
       .bnb-logo-img {
-        width: 170px;
+        width: $logo-width;
         object-fit: contain;
       }
     }
@@ -29,18 +33,15 @@
         text-align: center;
         position: absolute;
         top: 50px;
+        left: 50%;
         transform: translateX(-50%);
-        color: #152235;
-        font-size: 2.3em;
-        font-weight: bold;
-
+        color: $text-color-header;
+        font-size: $place-name-font-size;
         font-family: "Dancing Script", cursive;
         font-optical-sizing: auto;
         font-weight: 900;
         font-style: normal;
       }
     }
-
-
   }
 }

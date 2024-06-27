@@ -24,7 +24,7 @@ function App() {
   const handleLanguageChange = (language) => {
     setLanguage(language);
     localStorage.setItem('language', language);
-    window.location.reload();
+    //window.location.reload();
   };
 
   return (
@@ -37,8 +37,8 @@ function App() {
         setLanguage={setLanguage}
         handleLanguageChange={handleLanguageChange}
       />
-      <Main isMenuOpened={isMenuOpened} />
-      <Footer isMenuOpened={isMenuOpened} />
+      <Main isMenuOpened={isMenuOpened} language={language} />
+      <Footer isMenuOpened={isMenuOpened} language={language} />
     </div>
   );
 }

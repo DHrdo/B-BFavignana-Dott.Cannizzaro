@@ -1,14 +1,14 @@
 import React from "react";
 
-export const Footer = ({ isMenuOpened }) => {
+export const Footer = ({ isMenuOpened, language }) => {
     return (
         <div className={!isMenuOpened ? "footer" : "hidden"}>
             <h2 className="footer-title">B&B Favignana</h2>
             <div className="upper-footer">
-                <h4 className="footer-contacts-title">Contatti</h4>
+                <h4 className="footer-contacts-title">{language === 'italian' ? 'Contatti' : 'Contacts'}</h4>
 
                 <div className="wrap-address">
-                    <p className="footer-contacts-address"> <b>Indirizzo</b>: Via Roma, 15, Favignana</p>
+                    <p className="footer-contacts-address"> <b>{language === 'italian' ? 'Indirizzo' : 'Address'}</b>: Via Roma, 15, Favignana</p>
                     <a
                         className="map-icon"
                         rel="noreferrer"
@@ -21,9 +21,9 @@ export const Footer = ({ isMenuOpened }) => {
                         />
                     </a>
                 </div>
-                
 
-                <p className="footer-contacts-phone"> Telefono:
+
+                <p className="footer-contacts-phone"> {language === 'italian' ? 'Telefono' : 'Phone'}:
                     <a href="tel:3927252398">392 725 2398</a>
                 </p>
 
@@ -33,7 +33,7 @@ export const Footer = ({ isMenuOpened }) => {
             </div>
             <div className="bottom-footer">
                 <div className="footer-copyright">
-                    <p>&copy; 2024 Favignana B&B - Tutti i diritti riservati.</p>
+                    <p>&copy; 2024 Favignana B&B - {language === 'italian' ? 'Tutti i diritti riservati.' : 'All rights reserved.'}</p>
                 </div>
             </div>
 
