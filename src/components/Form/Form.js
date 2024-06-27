@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "react-datepicker/dist/react-datepicker.css"
+import form_language from "../../JSON/form_language.json"
 
 const InputField = ({ label, type, id, placeholder, pattern, min, max, required, onChange }) => (
     <div className="mb-3">
@@ -23,7 +23,7 @@ const SelectField = ({ label, id, options, required, onChange }) => (
     <div className="mb-3">
         <label htmlFor={id} className="form-label">{label}</label>
         <select className="form-select" id={id} onChange={onChange} required={required}>
-            <option value="">Seleziona una stanza</option>
+            <option value="">{label}</option>
             {options.map(option => (
                 <option key={option.value} value={option.value}>{option.label}</option>
             ))}
@@ -58,7 +58,11 @@ const CheckboxField = ({ label, id, required, onChange }) => (
     </div>
 )
 
-export const Form = () => {
+export const Form = ({ language }) => {
+
+    const labels = form_language[language] || form_language["italian"]
+
+
     const [formState, setFormState] = useState({
         firstName: "",
         lastName: "",
@@ -68,23 +72,21 @@ export const Form = () => {
         adults: 0,
         children: 0,
         bookingNotes: "",
-        startDate: null,
-        startTime: null,
-        endDate: null,
-        endTime: null,
+        startDate: "",
+        startTime: "",
+        endDate: "",
+        endTime: "",
         dataProcessing: false,
         isFormValid: false
     })
 
     const handleInputChange = (e) => {
         const { id, value, type, checked } = e.target
-        setFormState(prevState => (
-            {
-                ...prevState,
-                [id]: type === "checkbox" ? checked : value
-            }
-        ))
-    };
+        setFormState(prevState => ({
+            ...prevState,
+            [id]: type === "checkbox" ? checked : value
+        }))
+    }
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
@@ -93,11 +95,11 @@ export const Form = () => {
 
     return (
         <form className="form" id="form" onSubmit={handleFormSubmit}>
-            <h3 className="form-title">Prenota</h3>
+            <h3 className="form-title">{labels.submit}</h3>
 
             <div className="wrap-name">
                 <InputField
-                    label="Nome"
+                    label={labels.firstName}
                     type="text"
                     id="firstName"
                     placeholder="es: Mario"
@@ -106,7 +108,7 @@ export const Form = () => {
                     required
                 />
                 <InputField
-                    label="Cognome"
+                    label={labels.lastName}
                     type="text"
                     id="lastName"
                     placeholder="es: Rossi"
@@ -117,7 +119,7 @@ export const Form = () => {
             </div>
 
             <InputField
-                label="E-Mail"
+                label={labels.email}
                 type="email"
                 id="email"
                 placeholder="es: mario.rossi@esempio.com"
@@ -126,7 +128,7 @@ export const Form = () => {
                 required
             />
             <InputField
-                label="Numero Di Telefono"
+                label={labels.phone}
                 type="tel"
                 id="phone"
                 placeholder="es: 123 456 7890"
@@ -135,18 +137,18 @@ export const Form = () => {
                 required
             />
             <SelectField
-                label="Tipo di stanza"
+                label={labels.roomType}
                 id="roomType"
                 options={[
-                    { value: "single", label: "Singola" },
-                    { value: "double", label: "Doppia" },
-                    { value: "matrimoniale", label: "Matrimoniale" }
+                    { value: "single", label: labels.single },
+                    { value: "double", label: labels.double },
+                    { value: "matrimonial", label: labels.matrimonial }
                 ]}
                 onChange={handleInputChange}
                 required
             />
             <InputField
-                label="Numero di Adulti"
+                label={labels.adults}
                 type="number"
                 id="adults"
                 min="1"
@@ -155,7 +157,7 @@ export const Form = () => {
                 required
             />
             <InputField
-                label="Numero di Bambini"
+                label={labels.children}
                 type="number"
                 id="children"
                 min="0"
@@ -164,21 +166,21 @@ export const Form = () => {
                 required
             />
             <TextAreaField
-                label="Note / Informazioni"
+                label={labels.bookingNotes}
                 id="bookingNotes"
                 rows="3"
                 onChange={handleInputChange}
             />
             <div className="wrap-checkin">
                 <InputField
-                    label="Data Check-In"
+                    label={labels.startDate}
                     type="date"
                     id="startDate"
                     onChange={handleInputChange}
                     required
                 />
                 <InputField
-                    label="Ora Check-In"
+                    label={labels.startTime}
                     type="time"
                     id="startTime"
                     onChange={handleInputChange}
@@ -187,14 +189,14 @@ export const Form = () => {
             </div>
             <div className="wrap-checkout">
                 <InputField
-                    label="Data Check-Out"
+                    label={labels.endDate}
                     type="date"
                     id="endDate"
                     onChange={handleInputChange}
                     required
                 />
                 <InputField
-                    label="Ora Check-In"
+                    label={labels.endTime}
                     type="time"
                     id="endTime"
                     onChange={handleInputChange}
@@ -202,19 +204,21 @@ export const Form = () => {
                 />
             </div>
             <TextAreaField
-                label="Informativa sulla Privacy"
+                label={labels.privacyInfo}
                 id="dataProcessingInfo"
                 rows="8"
                 readOnly
-                defaultValue="In conformità con l’articolo 13 del D.L. 196 del 30 giugno 2003, desideriamo informarLa che i dati da Lei forniti nel modulo saranno trattati esclusivamente al fine di rispondere alla Sua richiesta di informazioni e non saranno comunicati a terzi né oggetto di diffusione."
+                defaultValue={
+                    "[IT] In conformità con l’articolo 13 del D.L. 196 del 30 giugno 2003, desideriamo informarLa che i dati da Lei forniti nel modulo saranno trattati esclusivamente al fine di rispondere alla Sua richiesta di informazioni e non saranno comunicati a terzi né oggetto di diffusione.\n\n[EN] In accordance with Article 13 of Legislative Decree 196 of June 30, 2003, we would like to inform you that the data you provide in the form will be processed exclusively for the purpose of responding to your request for information and will not be disclosed to third parties or disseminated."
+                } 
             />
             <CheckboxField
-                label="Accetto l'informativa sulla privacy"
+                label={labels.acceptPrivacy}
                 id="dataProcessing"
                 onChange={handleInputChange}
                 required
             />
-            <button type="submit" className="btn btn-primary">Invia</button>
+            <button type="submit" className="btn btn-primary">{labels.submit}</button>
         </form>
     )
 }

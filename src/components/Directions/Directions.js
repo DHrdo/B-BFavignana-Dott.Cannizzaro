@@ -11,21 +11,29 @@ const servicesList = [
     { distance: "150m", image: publicPath + "/images/services/atm.svg", alt: "atm icon" },
 ];
 export const Directions = ({
-    isMenuOpened
+    isMenuOpened,
+    language,
 }) => {
-
 
     return (
         <div className={isMenuOpened ? "hidden" : "directions"}>
             <div className="directions-container">
-                <h2 className="directions-title">Dove siamo</h2>
+                <h2 className="directions-title">{language === 'italian' ? 'Dove siamo' : 'Directions'}</h2>
                 <p className="directions-description">
-                    Il nostro Bed & Breakfast è un'oasi di comfort situata in <br /><b>Via Roma 15, Favignana</b>.
+                    {language === 'italian' ? (
+                        <>
+                            Il nostro Bed & Breakfast è un oasi di comfort situata in <br /><b>Via Roma 15, Favignana</b>.
+                        </>
+                    ) : (
+                        <>
+                            Our Bed & Breakfast is a comfortable stay in <br /><b>Via Roma 15, Favignana</b>.
+                        </>
+                    )}
                 </p>
             </div>
 
             <div className="near-locations-container">
-                <h2 className="services-title">Nei Dintorni</h2>
+                <h2 className="services-title">{language === 'italian' ? 'Nei Dintorni' : 'Nearby Locations'}</h2>
                 <ul className="services-list">
                     {servicesList.map((item, index) => (
                         <li key={index} className="service-item">

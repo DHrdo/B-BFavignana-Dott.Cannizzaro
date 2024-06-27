@@ -1,7 +1,7 @@
 $menu-background: #152235;
 $menu-item-border: black;
 $highlight-color: lightcoral;
-$menu-z-index: 9999;
+$menu-z-index: 8;
 
 .menu {
   display: grid;
@@ -15,6 +15,7 @@ $menu-z-index: 9999;
     width: 30px;
     cursor: pointer;
     position: relative;
+    top: 50px;
     z-index: $menu-z-index;
 
     span {

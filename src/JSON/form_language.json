@@ -1,0 +1,42 @@
+{
+    "english": {
+      "firstName": "Name",
+      "lastName": "Surname",
+      "email": "E-Mail",
+      "phone": "Phone Number",
+      "roomType": "Room Type",
+      "single": "Single",
+      "double": "Double",
+      "matrimonial": "Matrimonial",
+      "adults": "Number of Adults",
+      "children": "Number of Children",
+      "bookingNotes": "Notes / Information",
+      "startDate": "Check-In Date",
+      "startTime": "Check-In Time",
+      "endDate": "Check-Out Date",
+      "endTime": "Check-Out Time",
+      "privacyInfo": "Privacy Information",
+      "acceptPrivacy": "I accept the privacy policy",
+      "submit": "Submit"
+    },
+    "italian": {
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "E-Mail",
+      "phone": "Numero Di Telefono",
+      "roomType": "Tipo di stanza",
+      "single": "Singola",
+      "double": "Doppia",
+      "matrimonial": "Matrimoniale",
+      "adults": "Numero di Adulti",
+      "children": "Numero di Bambini",
+      "bookingNotes": "Note / Informazioni",
+      "startDate": "Data Check-In",
+      "startTime": "Ora Check-In",
+      "endDate": "Data Check-Out",
+      "endTime": "Ora Check-Out",
+      "privacyInfo": "Informativa sulla Privacy",
+      "acceptPrivacy": "Accetto l'informativa sulla privacy",
+      "submit": "Invia"
+    }
+  }

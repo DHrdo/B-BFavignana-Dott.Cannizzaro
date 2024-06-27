@@ -10,7 +10,8 @@
   width: 30px;
   cursor: pointer;
   position: relative;
-  z-index: 9999;
+  top: 50px;
+  z-index: 8;
 }
 .menu .hamburger-menu span {
   background: #152235;

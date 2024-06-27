@@ -8,6 +8,7 @@
   justify-content: space-between;
   padding: 20px 0;
   position: relative;
+  top: 50px;
 }
 .header .wrap-header .logo-link {
   display: inline-block;

@@ -3,6 +3,9 @@ $bg-color: #152235;
 $text-color: #52adc1;
 
 .pre-header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
     border-bottom: 1px solid $border-color;
     background-color: $bg-color;
     width: 100%;
